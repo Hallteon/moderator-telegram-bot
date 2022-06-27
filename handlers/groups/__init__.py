@@ -1,0 +1,1 @@
+from . import standart_handlers, captcha_handlers

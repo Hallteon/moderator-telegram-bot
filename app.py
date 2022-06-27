@@ -2,7 +2,6 @@ import filters, middlewares, handlers
 from aiogram import executor
 from loader import dp
 from utils import notify_admins, set_bot_commands
-from utils.db_utils.connect_db import connect
 from utils.db_utils.db_functions import create_table, disconnect_db
 
 
