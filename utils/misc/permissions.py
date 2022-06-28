@@ -20,7 +20,7 @@ async def get_new_user_permissions():
         can_send_messages=True,
         can_send_media_messages=False,
         can_send_polls=False,
-        can_send_other_messages=True,
+        can_send_other_messages=False,
         can_add_web_page_previews=False,
         can_invite_users=False,
         can_change_info=False,
