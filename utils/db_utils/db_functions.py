@@ -16,5 +16,11 @@ async def add_new_user(id, name):
     connect.commit()
 
 
+async def get_user_id(name):
+    cursor.execute(f"""SELECT id FROM users WHERE name = '{name}';""")
+
+    return cursor.fetchone()[0]
+
+
 async def disconnect_db():
     connect.close()
