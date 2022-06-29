@@ -1,1 +1,1 @@
-from . import standart_handlers, captcha_handlers
+from . import standart_handlers, captcha_handlers, message_handlers
