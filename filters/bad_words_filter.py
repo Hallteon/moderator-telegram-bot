@@ -7,10 +7,10 @@ from aiogram.dispatcher.filters import BoundFilter
 
 from loader import bot
 from utils.db_utils.db_functions import get_mute_time, add_mute_time, remove_user_xp, get_user_xp
-from utils.misc.permissions import get_muted_user_permissions
+from data.permissions import get_muted_user_permissions
 
 
-class Bad_Words_Filter(BoundFilter):
+class Is_Bad_Words(BoundFilter):
 
     async def check(self, message: types.Message):
         if message.is_command():

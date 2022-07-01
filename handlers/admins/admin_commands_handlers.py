@@ -5,7 +5,7 @@ from aiogram.dispatcher.filters import AdminFilter, Command
 
 from loader import dp, bot
 from utils.db_utils.db_functions import get_user_id
-from utils.misc.permissions import get_muted_user_permissions, get_user_permissions
+from data.permissions import get_muted_user_permissions, get_user_permissions
 
 
 @dp.message_handler(Command("mute"), AdminFilter())

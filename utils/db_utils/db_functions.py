@@ -49,5 +49,23 @@ async def remove_user_xp(id, xp):
     connect.commit()
 
 
+async def get_all_users():
+    cursor.execute("""SELECT name, id FROM users ORDER BY name ASC;""")
+    users = {}
+
+    for user in cursor.fetchall():
+        name = user[0]
+        id = user[1]
+
+        users[name] = int(id)
+
+    return users
+
+
+async def terminate_user(id):
+    cursor.execute(f"""DELETE FROM users WHERE id = '{id}';""")
+    connect.commit()
+
+
 async def disconnect_db():
     connect.close()
