@@ -7,7 +7,7 @@ from loader import dp, bot
 from states.captcha_state import Captcha_State
 from utils.db_utils.db_functions import add_new_user
 from utils.misc.create_captcha import create_captcha
-from utils.misc.permissions import get_new_user_permissions, get_user_permissions, get_muted_user_permissions
+from data.permissions import get_new_user_permissions, get_user_permissions, get_muted_user_permissions
 
 
 @dp.message_handler(chat_type=[types.ChatType.GROUP, types.ChatType.SUPERGROUP],
